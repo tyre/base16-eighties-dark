@@ -59,7 +59,7 @@
 }
 
 .keyword {
-  color: @green;
+  color: @magenta;
 }
 
 .storage.type {
@@ -96,8 +96,19 @@
   color: @red;
 }
 
+.class {
+  &.support {
+    @yellow;
+  }
+
+  &.other {
+    @red;
+  }
+
+}
+
 .string {
-  color: @cyan;
+  color: @green;
 
   .constant.character.escape {
     color: @red;
@@ -111,4 +122,48 @@
       color: @red;
     }
   }
+}
+
+.constant {
+  color: #F2777A;
+  &.numeric {
+    color: #F99157;
+  }
+  &.symbol,
+  &.punctuation {
+    color: #99CC99;
+  }
+  &.boolean {
+    color: @orange;
+  }
+}
+
+.keyword {
+  &.control {
+    color: @violet;
+  }
+}
+
+.editor-colors {
+  color: @base1;
+}
+
+.punctuation {
+  color: @base1;
+  &.separator,
+  &.definition {
+    color: @green;
+  }
+
+  &.comment {
+    color: @base01;
+  }
+
+}
+
+.variable {
+  &.block {
+    color: @red;
+  }
+
 }
