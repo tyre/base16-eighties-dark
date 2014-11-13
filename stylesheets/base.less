@@ -5,12 +5,12 @@
 @import "ui-variables";
 @import "colors";
 
-.editor-colors {
+.editor-colors, :host {
   background-color: @base03;
   color: @base0;
 }
 
-.editor {
+.editor, :host {
   .invisible-character,
   .indent-guide {
     color: @base01;
@@ -139,7 +139,7 @@
   }
 }
 
-.editor-colors {
+.editor-colors, :host {
   color: @base1;
 }
 
