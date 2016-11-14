@@ -1,11 +1,11 @@
 {
   "name": "base16-eighties-dark",
   "theme": "syntax",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Base16 Eighties Dark Theme for Atom",
   "repository": "https://github.com/tyre/base16-eighties-dark",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">= 1.13"
   }
 }
