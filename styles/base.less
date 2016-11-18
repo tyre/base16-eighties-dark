@@ -5,12 +5,11 @@
 @import "ui-variables";
 @import "colors";
 
-atom-text-editor, :host {
-  background-color: @base03;
-  color: @base0;
-}
+atom-text-editor,
+atom-text-editor.editor {
+    background-color: @base03;
+    color: @base1;
 
-atom-text-editor, :host {
   .invisible-character,
   .indent-guide {
     color: @base01;
@@ -35,7 +34,7 @@ atom-text-editor, :host {
   }
 
   .selection .region {
-    background-color: @base02;
+    background-color: @base01;
     color: @base03;
   }
 
@@ -49,117 +48,111 @@ atom-text-editor, :host {
   opacity: 0.7;
 }
 
-.comment {
+.syntax--comment {
   color: @base01;
   font-style: italic;
 }
 
-.entity {
+.syntax--entity {
   color: @yellow;
 }
 
-.keyword {
+.syntax--keyword {
   color: @magenta;
 }
 
-.storage.type,
-.storage.modifier {
+.syntax--storage.syntax--type {
   color: @green;
 }
 
-.constant {
+.syntax--constant {
   color: @yellow;
 
-  &.numeric,
-  &.boolean {
+  &.syntax--numeric,
+  &.syntax--boolean {
     color: @cyan;
   }
 }
 
-.variable {
+.syntax--variable, .syntax--storage.syntax--modifier {
   color: @blue;
 }
 
-.delimiter, .brace {
+.syntax--delimiter, .syntax--brace {
   color: @red;
 }
 
-.delimiter.period {
+.syntax--delimiter.syntax--period {
   color: @green;
 }
 
-.invalid.deprecated {
+.syntax--invalid.syntax--deprecated {
   text-decoration: underline;
   color: @red;
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   color: @red;
 }
 
-.class {
-  &.support {
+.syntax--class {
+  &.syntax--support {
     color: @yellow;
   }
 }
 
-.string {
+.syntax--string {
   color: @green;
 
-  .constant.character.escape {
+  .syntax--constant.syntax--character.syntax--escape {
     color: @red;
   }
 
-  &.regexp {
+  &.syntax--regexp {
     color: @cyan;
 
-    .source.ruby.embedded,
-    .string.regexp.arbitrary-repitition {
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
       color: @red;
     }
   }
 }
 
-.constant {
+.syntax--constant {
   color: @red;
-  &.numeric {
+  &.syntax--numeric {
     color: @orange;
   }
-  &.symbol,
-  &.punctuation {
+  &.syntax--symbol,
+  &.syntax--punctuation {
     color: @green;
   }
-  &.boolean {
+  &.syntax--boolean {
     color: @orange;
   }
 }
 
-.keyword {
-  &.control {
+.syntax--keyword {
+  &.syntax--control {
     color: @violet;
   }
 }
 
-atom-text-editor, :host {
+.syntax--punctuation {
   color: @base1;
-}
-
-.punctuation {
-  color: @base1;
-  &.separator,
-  &.definition {
+  &.syntax--separator,
+  &.syntax--definition {
     color: @green;
   }
 
-  &.comment {
+  &.syntax--comment {
     color: @base01;
   }
 
 }
 
-.variable {
-  &.block {
+.syntax--variable {
+  &.syntax--block {
     color: @red;
   }
-
 }
